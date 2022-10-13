@@ -1,0 +1,44 @@
+// Общее оформление
+.container {
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+body {
+    font-family: $primaryFont;
+    letter-spacing: 0.03em;
+    background-color: $white-background-color;
+    color: $primary-text-color;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// глобальный сброс margin, padding
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+// удалить точки у списков
+.list {
+    list-style: none;
+}
+
+// удалить подчеркивание у ссылок
+.link {
+    text-decoration: none;
+}
