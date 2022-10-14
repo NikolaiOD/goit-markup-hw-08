@@ -1,23 +1,25 @@
 // главный файл
 @import './utils/variables';
-@import './utils/hidden';
 @import './utils/default';
+@import './utils/hidden';
+@import './utils/container';
+
 
 @import './components/section';
 @import './components/logo';
 @import './components/header_nav';
 @import './components/header_contact';
+@import './components/header_social';
 @import './components/hero_modal';
 @import './components/hero_form';
 @import './components/footer-form';
 
 @import './layout/header';
-@import './layout/hero';
-@import './layout/benefits';
-@import './layout/work';
-@import './layout/team';
-@import './layout/client';
-@import './layout/footer';
+// @import './layout/hero';
+// @import './layout/benefits';
+// @import './layout/work';
+// @import './layout/team';
+// @import './layout/client';
+// @import './layout/footer';
 
 @import './layout/portfolio';
-
