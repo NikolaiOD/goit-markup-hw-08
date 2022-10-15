@@ -52,10 +52,11 @@
 }
 
 .menu__container {
-    background-color: $white-background-color;
-    
+    background-color: $white-background-color;    
     
     @media screen and (max-width: 767px) {
+        z-index: 1;
+        
         display: none;
         position: absolute;
         top: 0;
