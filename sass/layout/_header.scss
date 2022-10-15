@@ -12,14 +12,6 @@
 .header__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.header__flex {
-    display: flex;
-    align-items: center;    
 }
 
 .header__logo--black {
@@ -27,13 +19,10 @@
 }
 
 .menu__btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
     z-index: 2;
     
     display: inline-flex;
-    margin-left: 0;
+    margin-left: auto;
     padding: 0;
     border: none;
     color: #212121;
@@ -81,5 +70,6 @@
 
     @media screen and (min-width: 768px) {
         display: flex;
+        flex-grow: 1;
     }    
 }
