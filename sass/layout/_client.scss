@@ -1,16 +1,17 @@
 // client
 .client {
     display: flex;
-}
+    align-items: center;    
+    grid-gap: 30px;
+    flex-wrap: wrap;
 
-.client__item {
-    &:not(:first-child) {
-        margin-left: 30px;
-    }
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+  }
 }
 
 .client__link {
-    width: 170px;
+    width: 210px;
     height: 90px;
     display: flex;
     justify-content: center;
@@ -27,7 +28,15 @@
     &:focus {
         color: $accent-color;
         border-color: $accent-color;
+    }    
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
     }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+    }  
 }
 
 .client__icon {
