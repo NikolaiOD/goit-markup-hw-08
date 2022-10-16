@@ -1,6 +1,8 @@
 // form секции footer
-.footer-form {
-    margin-left: auto;
+.footer-form {    
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+    }
 }
 
 .footer-form__title {
@@ -15,14 +17,19 @@
 
 .footer-form__flex {
     display: flex;
-    justify-content: normal;
+
+    @media screen and (max-width: 1199px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer-form__email {
-    width: 358px;
+    width: 450px;
     height: 50px;
-    margin-right: 12px;
+    
     padding: 15px 16px;
+    margin-bottom: 20px;
 
     font-weight: 400;
     font-size: 16px;
@@ -39,6 +46,12 @@
     &:hover,
     &:focus {
         border-color: $accent-color;
+    }    
+
+    @media  screen and (min-width: 1200px) {
+        margin-right: 12px;
+        margin-bottom: 0;
+        width: 358px;
     }
 }
 
