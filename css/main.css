@@ -175,7 +175,7 @@ ul {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-top: 300px;
+    margin-top: auto;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -354,7 +354,6 @@ ul {
 
 .modal {
   position: relative;
-  min-width: 450px;
   min-height: 609px;
   background-color: #ffffff;
   -webkit-transform: scale(1);
@@ -363,6 +362,11 @@ ul {
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    min-width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -433,10 +437,14 @@ ul {
 }
 
 .form {
-  width: 450px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .form {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .form {
@@ -695,8 +703,12 @@ ul {
   }
 }
 
+.footer-form__label {
+  width: 100%;
+}
+
 .footer-form__email {
-  width: 450px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px;
   margin-bottom: 20px;
@@ -715,6 +727,11 @@ ul {
 }
 .footer-form__email:hover, .footer-form__email:focus {
   border-color: #2196f3;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-form__email {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-form__email {
@@ -821,14 +838,21 @@ ul {
   .menu__container {
     z-index: 1;
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
     padding: 48px 15px 48px 40px;
   }
   .menu__container.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media screen and (min-width: 768px) {
@@ -984,7 +1008,6 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 450px;
   height: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1175,9 +1198,12 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  grid-gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  grid-gap: 30px;
 }
 @media screen and (min-width: 1200px) {
   .client {
@@ -1186,21 +1212,38 @@ ul {
   }
 }
 
+.client__item {
+  -ms-flex-preferred-size: calc((100% - 30px) / 2);
+      flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .client__item {
+    -ms-flex-preferred-size: calc((100% - 60px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__item {
+    -ms-flex-preferred-size: calc((100% - 150px) / 6);
+        flex-basis: calc((100% - 150px) / 6);
+  }
+}
+
 .client__link {
-  width: 210px;
-  height: 90px;
+  line-height: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #afb1b8;
+  height: 90px;
+  border-radius: 4px;
+  border: 1px solid #afb1b8;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  color: #afb1b8;
   background-color: #ffffff;
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1208,16 +1251,6 @@ ul {
 .client__link:hover, .client__link:focus {
   color: #2196f3;
   border-color: #2196f3;
-}
-@media screen and (min-width: 768px) {
-  .client__link {
-    width: 226px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .client__link {
-    width: 170px;
-  }
 }
 
 .client__icon {
@@ -1252,7 +1285,10 @@ ul {
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    grid-gap: 30px 165px;
+    grid-gap: 60px 165px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
   }
 }
 @media screen and (min-width: 1200px) {

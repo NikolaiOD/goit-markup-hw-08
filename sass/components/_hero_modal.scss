@@ -1,13 +1,16 @@
 // модальное окно секции hero
 .modal {
-    position: relative;
-    min-width: 450px;
+    position: relative;    
     min-height: 609px;
 
     background-color: $white-background-color;
 
     transform: scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 480px) {
+            min-width: 450px;
+        }
 
     @media screen and (min-width: 1200px) {
         width: 528px;
